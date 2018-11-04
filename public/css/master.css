@@ -1,0 +1,203 @@
+/*custome background*/
+*
+{
+  margin: 0;
+  padding: 0;
+}
+.card
+{
+  background-color: #f0f3f4 ;
+  border-radius: 200px 0px 200px 0px;
+  -moz-border-radius: 200px 0px 200px 0px;
+  -webkit-border-radius: 200px 0px 200px 0px;
+  border: 0px solid #000000;
+}
+
+/*Home Page*/
+.cards
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display:inline-block ;
+  background:#fff;
+  width:100% ;
+}
+.container-cards
+{
+  margin-top: 6%;
+}
+.card-title
+{
+  margin-top: 5px;
+  font-weight: bold;
+}
+#home-title
+{
+  text-align: center;
+}
+.bg-home
+{
+  background-image: url(https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&h=650&w=940);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+/*End Home Page*/
+
+#margin-container
+{
+  margin-top: 10%;
+  width: 80%;
+}
+
+/*custome navbar*/
+.navbar
+{
+  top: 0;
+  background-color: #f0f3f4  ;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar-nav , .navbar-nav > li
+{
+  display: inline-block;
+}
+.nav-link , .icons
+{
+  font-size: 16px;
+}
+/*End Custome navbar*/
+
+/*Login page*/
+.all-body
+{
+  margin-top: 5%;
+  background-color: #fbfcfc ;
+}
+
+input,textarea,select
+{
+  border-radius: 50px !important;
+}
+/*End Login page*/
+
+/*Register pade*/
+.registre-body
+{
+
+}
+/*end registre page*/
+
+/*login and registre icon input*/
+#email
+{
+  background:url(/img/user.png) ;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 2px;
+  padding-left: 30px;
+}
+#password
+{
+  background:url(/img/password.png) ;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 6px;
+  padding-left: 30px;
+}
+/*End login and registre icon input*/
+
+/*Add Job Page*/
+#description,#requirements
+{
+  height: 200px;
+}
+
+#add-job-container
+{
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 100%;
+}
+/*End Add Job Page*/
+
+
+/*details page*/
+.detils-content
+{
+  width: 70%;
+  margin-left: 10%;
+}
+.card-text-details
+{
+  font-size: 20px;
+  font-family: serif;
+}
+.card-title-details
+{
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: cursive;
+}
+/*End details page*/
+
+/*add job done page*/
+.add-job-body
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/*end add job done page */
+/*From laravel not From me*/
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+/*End From laravel no From me*/
