@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Http\Requests;
+
 
 class RegisterController extends Controller
 {
@@ -43,7 +46,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -60,16 +63,30 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \App\User
      */
     protected function create(array $data)
     {
+        $type =2;
+        $cv = null;
+        if(Input::hasfile('cvfile') && Input::file('cvfile')->isValid())
+        {
+            $file = Input::file('cvfile');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move(public_path('CV/'), $filename);
+            $cv = $filename;
+            $type = 3;
+        }
+
         return User::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'address' => $data['address'],
             'tele_no' => $data['tele_no'],
+            'type' => $type,
+            'cv' => $cv,
             'password' => Hash::make($data['password']),
         ]);
     }

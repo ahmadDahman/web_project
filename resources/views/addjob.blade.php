@@ -120,9 +120,8 @@
                               <label for="picture" class="col-md-4 col-form-label text-md-right">{{ __('Picture') }}</label>
                               <div class="col-md-6">
                                 <div class="form-group">
-                                  <input type="file" class="form-control-file border" name="picture" id="picture">
+                                  <input type="file" class="form-control-file border" name="picture" id="picture" accept="image/*">
                                 </div>
-                          <div/>
                               </div>
 
                           </div>

@@ -4,7 +4,7 @@
   <div class="container container-cards">
     <div class="detils-content">
         <div class="cards">
-        <img class="card-img-top" src="https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Card image cap">
+        <img class="card-img-top" src="{{URL::to('/jobsPictures/'.$job->picture)}}" alt="Card image cap">
         <h5 class="card-title-details">{{$job->title}}</h5>
         <p class="card-text-details">comany name : {{$job->company_name}}</p>
         <p class="card-text-details">categroy : {{$job->categroy}}</p>

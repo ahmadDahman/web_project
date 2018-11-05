@@ -16,7 +16,8 @@ class BusinessOwnersController extends Controller
     public function JobOffering()
     {
       $userid = Auth::id();
-      $offering = job::where('userid',$userid)->firstOrFail();
+      $offering = job::where('userid',$userid)->get();
       return view('myannouncements')->with('offering',$offering);
     }
+
 }

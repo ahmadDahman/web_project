@@ -20,5 +20,4 @@ Route::get('/home','JobsController@showJobs');
 
 Route::get('/addjob','JobsController@AddJob')->name('addjob');
 Route::post('/addnewjob', 'JobsController@AddNewJob');
-Route::get('/myannouncements', 'BusinessOwnersController@JobOffering');
-Route::get('/anything', 'BusinessOwnersController@JobOffering');
+Route::get('myannouncements', 'BusinessOwnersController@JobOffering')->name('myannouncements');

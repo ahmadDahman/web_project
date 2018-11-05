@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Styles -->
@@ -53,7 +53,8 @@
                         @else
                             @if(Auth::user()->type == 2)
                                 <script type="text/jscript">
-                                    $("#right-ul").append('<li class="nav-item"><a class="nav-link" href="{{ route('addjob') }}"><i class="fa fa-plus icons"></i> {{ __('Add Job') }}</a></li>');
+                                    $("#right-ul").append('<li class="nav-item"><a class="nav-link" href="{{ route('addjob') }}"><i class="fa fa-plus icons"></i> {{ __('Add Job') }}</a></li>' +
+                                    '<li class="nav-item"><a class="nav-link" href="{{ route('myannouncements') }}"><i class="fa fa-star-half-alt"></i> {{ __('My Announcements') }}</a></li>');
                                 </script>
                             @endif
                             <li class="nav-item dropdown">
