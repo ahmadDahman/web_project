@@ -27,6 +27,8 @@ class CreateJobsTable extends Migration
             $table->string('picture')->default('noImage');
             $table->boolean('sponsored')->default(0);
             $table->integer('userid')->unsigned();
+            $table->integer('views')->default(0);
+            $table->boolean('state')->default(0);
             $table->foreign('userid')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

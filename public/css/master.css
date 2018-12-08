@@ -193,6 +193,77 @@ input,textarea,select
   transform: translate(-50%,-50%);
 }
 /*end add job done page */
+
+/*admin master*/
+.admin-body {
+    margin:0px;
+    padding:0px;
+    width: 100%;
+    height: 100vh;
+    box-sizing:border-box;
+    background:#F8F8FF;
+}
+.main_sidebar {
+    min-height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    width:200px;
+    background: #426CDA;
+}
+.main_sidebar ul {
+    list-style:none;
+    padding-left:8px;
+}
+.main_sidebar ul li {
+    padding:10px;
+}
+.main_sidebar ul li a {
+    color:#fff;
+    display:block;
+}
+.main_sidebar ul li:hover {
+    background:#3495e3;
+}
+.main_sidebar ul li a:hover {
+    color:#fff;
+    text-decoration:none;
+}
+.admin-content
+{
+    width: 86%;
+    height: 100vh;
+    margin-left: 205px;
+}
+/*end admin master*/
+
+/*admin home*/
+.admin-home-card
+{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.admin-card
+{
+    border: 1px solid #1d68a7;
+    text-align: center;
+    vertical-align: middle;
+    height: 200%;
+}
+/*end admin home*/
+
+/*Admin Views*/
+.details
+{
+    margin-top: 1%;
+    text-align: center;
+}
+.btn-c
+{
+    background: none;
+    border: none;
+}
+/*end admin Views*/
 /*From laravel not From me*/
 .full-height {
     height: 100vh;

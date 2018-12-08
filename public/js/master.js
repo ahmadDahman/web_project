@@ -1,6 +1,5 @@
 $(document).ready(function () {
     repate();
-
     $("#finjob-selected").click(function ()
         {
             $("#bu").before("<div id='reg-form-file' class=\"form-group row\">" +
@@ -26,8 +25,8 @@ $(document).ready(function () {
 
             $('#welcome').append($message.pop());
 
-            if ($message.length === 0) {
-                // No more characters. Break out.
+            if ($message.length === 0)
+            {
                 clearInterval(outputSlowly);
                 $("#welcome").empty();
                 repate();
@@ -36,5 +35,9 @@ $(document).ready(function () {
         }, $timeout);
     }
 
+
+
 });
+
+
 

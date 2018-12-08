@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -53,8 +54,12 @@
                         @else
                             @if(Auth::user()->type == 2)
                                 <script type="text/jscript">
-                                    $("#right-ul").append('<li class="nav-item"><a class="nav-link" href="{{ route('addjob') }}"><i class="fa fa-plus icons"></i> {{ __('Add Job') }}</a></li>' +
+                                    $("#right-ul").append('<li class="nav-item"><a class="nav-link" href="{{ route('jobs.create') }}"><i class="fa fa-plus icons"></i> {{ __('Add Job') }}</a></li>' +
                                     '<li class="nav-item"><a class="nav-link" href="{{ route('myannouncements') }}"><i class="fa fa-star-half-alt"></i> {{ __('My Announcements') }}</a></li>');
+                                </script>
+                            @elseif(Auth::user()->type == 3)
+                                <script type="text/jscript">
+                                    $("#right-ul").append('<li class="nav-item"><a class="nav-link" href="{{ route('SearchPanel') }}"><i class="fa fa-search" aria-hidden="true"></i> {{ __('Search Panel') }}</a></li>');
                                 </script>
                             @endif
                             <li class="nav-item dropdown">

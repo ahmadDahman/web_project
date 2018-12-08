@@ -15,7 +15,7 @@ class isUser
      */
     public function handle($request, Closure $next)
     {
-      if (Auth::check() && $request->user()->type != 3)
+      if (auth()->check() && $request->user()->type != 3)
       {
         return redirect('home');
       }

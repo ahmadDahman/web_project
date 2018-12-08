@@ -8,6 +8,6 @@ class job extends Model
 {
     //
     protected $fillable = [
-         'title', 'company_name' ,'category','address','street','city','requirements','salary','picture', 'description'
+         'title', 'company_name' ,'category','address','street','city','requirements','salary', 'description'
     ];
 }

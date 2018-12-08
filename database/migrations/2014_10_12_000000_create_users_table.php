@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('tele_no',20);
             $table->smallInteger('type')->default(3);
-            $table->string('cv')->default(null);
+            $table->string('cv')->default(null)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

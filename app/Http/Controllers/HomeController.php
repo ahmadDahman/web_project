@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+use App\Http\Middleware\isAdmin;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(Auth::user()->type == 1)
+        {
+            return view('AdminViews.adminHome');
+        }
+        else
+        {
+            return view('home');
+        }
     }
 }
