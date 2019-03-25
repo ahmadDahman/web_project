@@ -4,8 +4,6 @@
         var currURL = document.URL;
         document.getElementById("getURL").src='https://www.facebook.com/plugins/share_button.php?href='+currURL+'&layout=button_count&size=small&mobile_iframe=true&width=97&height=20&appId';
     }
-
-
 </script>
 <div class="bg-home">
     <h1 id ="welcome"></h1>
